@@ -1,0 +1,86 @@
+.page-container {
+  padding: 16px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.page-header h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #1a1a2e;
+}
+
+.order-count {
+  background: #1a1a2e;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.orders-list {
+  min-height: 200px;
+}
+
+.skeleton-card {
+  height: 150px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 12px;
+  margin: 8px 0;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.empty-state, .error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  gap: 16px;
+}
+
+.empty-icon, .error-icon {
+  font-size: 64px;
+  opacity: 0.5;
+}
+
+.empty-state p, .error-state p {
+  font-size: 16px;
+  color: #666;
+}
+
+.retry-button {
+  background: #1a1a2e;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  min-height: 48px;
+}
+
+.refresh-indicator {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 1000;
+}
